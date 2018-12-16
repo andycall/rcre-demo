@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const config = {
+  body: [{
+    type: 'container',
+    model: 'demo',
+    children: [{
+      type: 'text',
+      text: 'helloworld'
+    }]
+  }]
+};
+
 class App extends Component {
   render() {
     return (

@@ -3,6 +3,9 @@ import code from './config/index';
 import marked from 'marked';
 const doc = require('./README.md');
 
+/* eslint-disable import/first */
+import './filters/toSum';
+
 const Render = window.RCRE.Render;
 
 export default class Hellworld extends React.PureComponent {
@@ -25,7 +28,7 @@ export default class Hellworld extends React.PureComponent {
         return (
             <div>
                 <div dangerouslySetInnerHTML={{__html: marked(this.state.html)}} />
-                <hr/>
+                <hr />
                 <Render code={code} />
             </div>
         );

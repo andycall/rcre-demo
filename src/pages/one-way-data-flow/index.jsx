@@ -26,7 +26,9 @@ export default class Hellworld extends React.PureComponent {
             <div>
                 <div dangerouslySetInnerHTML={{__html: marked(this.state.html)}} />
                 <hr/>
-                <Render code={code} />
+                <div style={{width: 500}}>
+                    <Render code={code} />
+                </div>
             </div>
         );
     }
